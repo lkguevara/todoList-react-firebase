@@ -1,0 +1,45 @@
+.addTask{
+    display: flex;
+    justify-content: center;
+    margin-left: 35px;
+
+    input{
+        width: 50%;
+        height: 60px;
+        padding: 20px 50px;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button{
+        position: relative;
+        top: 0; 
+        right: 40px;
+        background: transparent;
+        border: 0;
+        height: auto;
+
+        &:hover,
+        &:focus,
+        &:active{
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        img{
+            fill: #bdbdbd;
+            width: 20px;
+        }   
+    }
+
+    & input{
+        padding: 0;
+        border: 1px solid #dadada;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+      }
+}

@@ -1,4 +1,5 @@
-import firebase from 'firebase/app';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCpOgJSQlRniGyXhtuJAbMy9QDalCRiM0I",
@@ -7,6 +8,10 @@ const firebaseConfig = {
     storageBucket: "todo-list-7776e.appspot.com",
     messagingSenderId: "245380279887",
     appId: "1:245380279887:web:23bc6ab98c1ed9b2b5043a"
-};
+  };
 
-export default firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+export { db };

@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss';
 import {Container, Row, Col} from 'react-bootstrap';
+import AddTask from './components/AddTask/AddTask';
+import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -30,8 +32,8 @@ function App() {
           xs={{span: 10, offset: 1}}
           md={{span: 6, offset: 3}}
         >
-          <input type='text' placeholder='Add a task' />
         </Col>
+        <AddTask />
       </Row>
     </Container>
   )
