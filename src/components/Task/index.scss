@@ -24,6 +24,10 @@
                 height: 22px;
                 fill: #bdbdbd;
 
+                &.completed{
+                    fill: green;
+                }
+
                 &:hover{
                     cursor: pointer;
                     fill: green;
@@ -44,4 +48,5 @@
             }
         } 
     }
+
 }

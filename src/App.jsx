@@ -13,13 +13,12 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await getDocs(query(collection(db, "tasks"), orderBy('completed')))
+      const data = await getDocs(query(collection(db, "tasks"), orderBy('completed' , 'asc')))
       const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()}))
-      console.log(arrayData)
       setTasksDB(arrayData)
     }
     getData()
-  }, [])
+  }, [tasksDB])
 
   return (
     <Container className='app' fluid>
@@ -48,13 +47,17 @@ function App() {
           xs={{span: 10, offset: 1}}
           md={{span: 6, offset: 3}}
         >
+
         {
-          tasksDB.map(task => (
-            <Task 
-              taskDB={task}
-              key={task.id}
-            />
-          ))
+          tasksDB.length === 0 
+            ? <p className='todo__list__empty'>No tasks, add a task</p>
+            : 
+            tasksDB.map(task => (
+              <Task 
+                taskDB={task}
+                key={task.id}
+              />
+            ))
         }
         </Col>
     </Container>

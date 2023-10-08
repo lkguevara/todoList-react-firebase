@@ -66,6 +66,11 @@
       width: 74%;
       margin: 0 auto;
       border-radius: 10px;
+
+      &__empty{
+        color: #9c9b9b;
+        background-color: #ededed;
+      }
     }
   }
 
