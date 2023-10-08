@@ -4,12 +4,20 @@
     margin-left: 35px;
 
     input{
-        width: 50%;
+        width: 80%;
         height: 60px;
         padding: 20px 50px;
 
         &:focus{
             outline: none;
+        }
+
+        @media (min-width: 768px) {
+            width: 64%;
+        }
+
+        @media (min-width: 1200px) {
+            width: 51%;
         }
     }
 
@@ -41,5 +49,6 @@
         border-radius: 5px;
         overflow: hidden;
         text-align: center;
+        margin: 30px 0;
       }
 }
